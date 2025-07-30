@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
@@ -5,11 +8,11 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="flex items-center justify-between h-16">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <h1 className="text-2xl font-bold text-gray-900 hover:text-purple-600 transition-colors">SplitDine</h1>
-            </a>
+            </Link>
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="/privacy" className="text-gray-600 hover:text-gray-900 transition-colors">Terms & Privacy</a>
+              <Link href="/privacy" className="text-gray-600 hover:text-gray-900 transition-colors">Terms & Privacy</Link>
             </nav>
             <div className="md:hidden">
               <button className="text-gray-600 hover:text-gray-900">
@@ -44,10 +47,10 @@ export default function Home() {
 
             <div className="mt-2 flex items-center gap-6 justify-center lg:justify-start">
               <a href="https://apps.apple.com/app/id6749145661" className="hover:opacity-80 transition-opacity">
-                <img src="/appstore.svg" alt="Download on App Store" className="h-24 md:h-32 lg:h-36 w-auto" />
+                <Image src="/appstore.svg" alt="Download on App Store" width={144} height={144} className="h-24 md:h-32 lg:h-36 w-auto" />
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.noodev8.splitdine2" className="hover:opacity-80 transition-opacity">
-                <img src="/googleplay.svg" alt="Get it on Google Play" className="h-24 md:h-32 lg:h-36 w-auto" />
+                <Image src="/googleplay.svg" alt="Get it on Google Play" width={144} height={144} className="h-24 md:h-32 lg:h-36 w-auto" />
               </a>
             </div>
           </div>
@@ -56,10 +59,13 @@ export default function Home() {
           <div className="flex-none lg:flex-1">
             <div className="flex justify-center lg:justify-start">
               <div className="relative w-full max-w-[200px] md:max-w-[250px] lg:max-w-[280px]">
-                <img 
+                <Image 
                   src="/mockup.png" 
                   alt="SplitDine app screenshot" 
+                  width={280}
+                  height={500}
                   className="w-full max-h-[500px] object-contain rounded-3xl shadow-2xl border-4 border-gray-200 transform hover:scale-105 transition-transform duration-300" 
+                  priority
                 />
               </div>
             </div>
@@ -176,10 +182,10 @@ export default function Home() {
           
           <div className="flex items-center gap-6 justify-center">
             <a href="https://apps.apple.com/app/id6749145661" className="hover:opacity-80 transition-opacity">
-              <img src="/appstore.svg" alt="Download on App Store" className="h-24 md:h-32 lg:h-36 w-auto" />
+              <Image src="/appstore.svg" alt="Download on App Store" width={144} height={144} className="h-24 md:h-32 lg:h-36 w-auto" />
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.noodev8.splitdine2" className="hover:opacity-80 transition-opacity">
-              <img src="/googleplay.svg" alt="Get it on Google Play" className="h-24 md:h-32 lg:h-36 w-auto" />
+              <Image src="/googleplay.svg" alt="Get it on Google Play" width={144} height={144} className="h-24 md:h-32 lg:h-36 w-auto" />
             </a>
           </div>
         </div>
@@ -192,11 +198,11 @@ export default function Home() {
             
             {/* Brand */}
             <div className="md:col-span-2">
-              <a href="/" className="inline-block">
+              <Link href="/" className="inline-block">
                 <h3 className="text-2xl font-bold text-white mb-4 hover:text-purple-300 transition-colors">SplitDine</h3>
-              </a>
+              </Link>
               <p className="text-gray-400 mb-6 max-w-md">
-                Making group dining simple with intuitive bill splitting. Type while you wait, split what you share. <span className="text-green-400 font-semibold">Always free.</span>
+                Making group dining simple with intuitive bill splitting. Type while you wait, split what you share. <span className="text-green-400 font-semibold">Free.</span>
               </p>
             </div>
 
@@ -213,9 +219,8 @@ export default function Home() {
             <div>
               <h4 className="text-white font-semibold mb-4">Legal</h4>
               <ul className="space-y-2">
-                <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors">Terms & Privacy</Link></li>
                 <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
               </ul>
             </div>
           </div>

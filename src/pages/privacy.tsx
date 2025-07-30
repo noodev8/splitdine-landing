@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
@@ -5,11 +7,11 @@ export default function Privacy() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
           <div className="flex items-center justify-between h-16">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <h1 className="text-2xl font-bold text-gray-900 hover:text-purple-600 transition-colors">SplitDine</h1>
-            </a>
+            </Link>
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="/privacy" className="text-gray-600 hover:text-gray-900 transition-colors">Terms & Privacy</a>
+              <Link href="/privacy" className="text-gray-600 hover:text-gray-900 transition-colors">Terms & Privacy</Link>
             </nav>
             <div className="md:hidden">
               <button className="text-gray-600 hover:text-gray-900">
@@ -160,9 +162,9 @@ export default function Privacy() {
             
             {/* Brand */}
             <div className="md:col-span-2">
-              <a href="/" className="inline-block">
+              <Link href="/" className="inline-block">
                 <h3 className="text-2xl font-bold text-white mb-4 hover:text-purple-300 transition-colors">SplitDine</h3>
-              </a>
+              </Link>
               <p className="text-gray-400 mb-6 max-w-md">
                 Making group dining simple with intuitive bill splitting. Type while you wait, split what you share.
               </p>
@@ -181,7 +183,7 @@ export default function Privacy() {
             <div>
               <h4 className="text-white font-semibold mb-4">Legal</h4>
               <ul className="space-y-2">
-                <li><a href="/privacy" className="hover:text-white transition-colors">Terms & Privacy</a></li>
+                <li><Link href="/privacy" className="hover:text-white transition-colors">Terms & Privacy</Link></li>
                 <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
               </ul>
             </div>
